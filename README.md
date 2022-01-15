@@ -9,3 +9,4 @@ Application form: https://docs.google.com/forms/d/e/1FAIpQLSc0RFu0mFL_BIoOhdi3yr
 4. Provide link to repo in application
 
 Good luck!
+Kenny is ocol
