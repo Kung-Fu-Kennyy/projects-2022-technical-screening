@@ -31,8 +31,55 @@ var assert = require("assert")
 // Explanation: Empty array...
 
 const altNumbers = (numArray) => {
-    // TODO: COMPLETE THIS FUNCTION
-    return [];
+
+    let array_length = numArray.length;
+    let positive_array = [];
+    let negative_array = [];
+    let new_array = [];
+    let positive_length = 0;
+    let negative_length = 0;
+    let i = 0;
+
+    while (i < array_length) {
+        if (numArray[i] >= 0) {
+            positive_array[positive_length] = numArray[i];
+            positive_length++;
+        } else {
+            negative_array[negative_length] = numArray[i];
+            negative_length++;           
+        }
+        i++;
+    }
+
+    let positive_counter = 0;
+    let negative_counter = 0;
+    i = 0;
+
+    if (array_length % 2 == 0 || positive_length > negative_length) {
+        while (i < array_length) {
+            if (i % 2 == 0) {
+                new_array[i] = positive_array[positive_counter];
+                positive_counter++;
+            } else {
+                new_array[i] = negative_array[negative_counter];
+                negative_counter++;           
+            }
+            i++;
+        }
+    } else {
+        while (i < array_length) {
+            if (i % 2 == 0) {
+                new_array[i] = negative_array[negative_counter];
+                negative_counter++;   
+            } else {
+                new_array[i] = positive_array[positive_counter];
+                positive_counter++;       
+            }
+            i++;
+        }
+    }
+
+    return new_array;
 }
 
 module.exports = { altNumbers } // Do not modify this line
